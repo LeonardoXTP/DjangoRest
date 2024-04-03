@@ -16,6 +16,6 @@ class GroupViewSet(viewsets.ModelViewSet):
     """
     Endpoint de la API que permite ver o editar grupos
     """
-    queryset = Group.objects.all().order_by('-name')
+    queryset = Group.objects.all().order_by('name')
     serializer_class = GroupSerializer
     permission_classes = [permissions.IsAuthenticated]
